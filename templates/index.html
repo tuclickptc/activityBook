@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Generador de Sopas de Letras</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Generador de Sopas de Letras</h1>
+      <form action="/generate" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="file">Archivo TXT:</label>
+          <input type="file" class="form-control-file" id="file" name="file" required>
+        </div>
+        <div class="form-group">
+          <label for="size">Tamaño de Página:</label>
+          <select class="form-control" id="size" name="size">
+            <option value="A4">A4</option>
+            <option value="Letter">Letter</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="puzzles_per_page">Puzzles por página:</label>
+          <input type="number" class="form-control" id="puzzles_per_page" name="puzzles_per_page" value="1">
+        </div>
+        <div class="form-group">
+          <label for="solutions_location">Ubicación de las soluciones:</label>
+          <select class="form-control" id="solutions_location" name="solutions_location">
+            <option value="end">Al final</option>
+            <option value="after_each">Después de cada puzzle</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="solutions_per_page">Respuestas por página:</label>
+          <input type="number" class="form-control" id="solutions_per_page" name="solutions_per_page" value="1">
+        </div>
+        <div class="form-group">
+          <label for="font_size">Tamaño de la fuente:</label>
+          <input type="number" class="form-control" id="font_size" name="font_size" value="12">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="include_logo" name="include_logo">
+          <label class="form-check-label" for="include_logo">Incluir logo</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Generar PDF</button>
+      </form>
+    </div>
+  </body>
+</html>
